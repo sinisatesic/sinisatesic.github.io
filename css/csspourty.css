@@ -15,6 +15,7 @@ h1 {
     margin-left: 5%;
     animation: bounce 2s;
     animation-iteration-count: infinite;
+
 }
 
 @keyframes bounce {

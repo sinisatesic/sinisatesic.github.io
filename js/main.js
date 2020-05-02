@@ -57,6 +57,7 @@ t4.from(".my-name", 3, {
     ease: Expo.easeInOut
 }, "-=5");
 
+// below is for welcome text appearing to be typed in
 var t5 = new TimelineMax();
 t5.timeScale(42);
 
@@ -97,8 +98,6 @@ t5.from(".welcome-span-w", 4, {
     ease: Expo.easeInOut
 }, "-=4");
 
-
-
 //welcome paragraphs transition
 var t6 = new TimelineMax();
 
@@ -128,6 +127,7 @@ t7.from(".welcome-par-3", 3, {
     ease: Expo.easeIn
 }, "-=4");
 
+// below is for Projects button
 var t8 = new TimelineMax();
 
 t8.from(".header-button", 3, {
