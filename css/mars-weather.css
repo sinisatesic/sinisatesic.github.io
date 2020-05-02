@@ -1,3 +1,4 @@
+/*applying border box box-sizing to all*/
 *::before,
 *::after {
     box-sizing: border-box;
@@ -19,7 +20,7 @@
     --clr-accent: #D06D6D;
     --clr-accent-dark: #613131;
 }
-
+/*for screen-reader option*/
 .screen-reader:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -29,7 +30,7 @@
     white-space: nowrap;
     width: 1px;
 }
-
+/*area encompasing background image and content on top of it (text/descriptions/marker)*/
 body {
     margin: 0;
     font-family: "Roboto Light";
@@ -50,7 +51,7 @@ a {
 a:hover{
     color: var(--clr-gray);
 }
-
+/*internal properties for previous 7 days title*/
 .main-title {
     font-size: var(--fs-h1);
     font-weight: var(--fw-light);
@@ -60,7 +61,13 @@ a:hover{
     letter-spacing: 2px;
     grid-column: 1 / -1;
     text-align: center;
+    /*margin-top: -20px;*/
 }
+/*previous days title*/
+h2 {
+    margin-top: -5px;
+}
+
 
 .section-title {
     font-size: var(--fs-h2);
@@ -78,7 +85,7 @@ a:hover{
     margin: 0;
     color: var(--clr-gray);
 }
-
+/*weather being displayed in main body section - faded black box background*/
 .current-weather {
     background: rgba(0,0,0,.7);
     padding: 2em;
@@ -92,6 +99,7 @@ a:hover{
 .date {
     grid-column: 1 / 2;
 }
+/*date on body section*/
 .date-day {
     font-size: var(--fs-h2);
     margin: 0;
@@ -110,6 +118,7 @@ a:hover{
     /*may need to revisit padding here*/
 }
 
+/*wind details in body*/
 .wind {
     grid-column: 3 / 4;
     display: grid;
@@ -124,6 +133,7 @@ a:hover{
 .reading {
     grid-column: 2 / 3;
 }
+/*circular marker with arrow indicating direction of wind on the plain*/
 .wind-direction {
     grid-column: 3 / 4;
     border-radius: 50%;
@@ -137,6 +147,7 @@ a:hover{
     margin-left: -11em;
     animation: background-color-change 15s ease-in-out infinite;
 }
+/*color-changing animation keys for circular wind-direction marker*/
 @keyframes background-color-change {
     0% {
         background: #ec6548;
@@ -154,6 +165,7 @@ a:hover{
         background: #ec6548;
     }
 }
+/*arrow within circular wind-direction marker*/
 .wind-arrow {
     --direction: 0deg;
     /*direction: ltr;*/
@@ -175,7 +187,7 @@ a:hover{
     grid-column: 1 / 3;
 }
 
-
+/*the toggle unit on body which allows switch from c to fh*/
 .unit {
     grid-column: 3 / 4;
     place-self: end;
@@ -227,7 +239,7 @@ a:hover{
     margin-left: 3px;
     /*margin-right: auto;*/
 }
-
+/*bottom section weather - white background - rest of days of week*/
 .previous-weather {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -266,6 +278,7 @@ a:hover{
     display: flex;
     justify-content: space-between;
     padding: 2em;
+    margin-top: -20px;
 }
 
 .day-before {
@@ -291,23 +304,12 @@ a:hover{
 .day-before-info:hover {
     background: var(--clr-gray);
 }
-
+/*bottom section with white background - weather for rest of days of week*/
 .show-weather.previous-weather {
     transform: translateY(0);
 }
 
-.show-weather.previous-weather span{
-    /*display: block;*/
-    /*transform: translateY(1px) rotate(180deg);*/
-}
-
-.show-weather span {
-    /*display: block;*/
-    /*transform: rotate(180deg);*/
-}
-
-
-
+/*moving vertically across screen*/
 #spaceinvader {
     box-shadow: 0 0 0 1em #D06D6D,
     0 1em 0 1em #ec6548,
@@ -347,7 +349,7 @@ a:hover{
     animation: slideinvader 15s;
     animation-iteration-count: infinite;
 }
-
+/*space indvader moving vertically */
 @keyframes slideinvader {
     0%{
         transform: translate3d(0em, 0em, 0em);
