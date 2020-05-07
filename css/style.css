@@ -10,15 +10,18 @@
 }
 /*media queries for mobile response*/
 @media (max-width: 480px) {
+    #picture-card{
+        top: -100px;
+    }
     .first-icon {
-        margin-left: -42%;
+        margin-left: -25%;
     }
     .second-icon {
         margin-top: -46%;
         margin-left: 15%;
     }
     .third-icon {
-        margin-left: 70%;
+        margin-left: 55%;
         margin-top: -80%;
     }
     .icon-span-1 {
@@ -42,7 +45,7 @@
     }
     .header-button {
         margin-left: -11%;
-        margin-top: -4%;
+        margin-top: -30%;
     }
     .footer {
         text-align: center;
