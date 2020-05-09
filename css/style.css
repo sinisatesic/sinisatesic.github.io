@@ -219,7 +219,8 @@
 
 /*card containing picture of self; has attributed to it keyframe animation for fade-in opacity*/
 .rounded-circle {
-    margin: 0 auto;
+    margin: 10px auto;
+    /*margin-top: 10px;*/
     height: 90%;
     width: 90%;
     padding: 10px;
@@ -300,6 +301,7 @@ span.header-button-span {
 .footer {
     color: #fff;
     background-color: #1a2f5e;
+    height: 55%;
 }
 .footer-subtext {
     color: #e5c84f;
