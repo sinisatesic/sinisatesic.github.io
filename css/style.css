@@ -18,7 +18,7 @@
     }
     .second-icon {
         margin-top: -46%;
-        margin-left: 15%;
+        margin-left: 17%;
     }
     .third-icon {
         margin-left: 55%;
@@ -45,13 +45,10 @@
     }
     .header-button {
         margin-left: -11%;
-        margin-top: -30%;
+        margin-top: -35%;
     }
     .footer {
         text-align: center;
-    }
-    #time {
-        margin-left: 20px;
     }
     .footer-title, .footer-subtext {
         text-align: center;
@@ -221,6 +218,13 @@
 }
 
 /*card containing picture of self; has attributed to it keyframe animation for fade-in opacity*/
+.rounded-circle {
+    margin: 0 auto;
+    height: 90%;
+    width: 90%;
+    padding: 10px;
+    border: 5px solid #fff;
+}
 #picture-card {
     background: transparent;
     border-style: none;
