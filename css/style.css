@@ -220,15 +220,15 @@
 /*card containing picture of self; has attributed to it keyframe animation for fade-in opacity*/
 .rounded-circle {
     margin: 10px auto;
-    height: 90%;
-    width: 90%;
-    border: 7px solid #fff;
+    /*height: 90%;*/
+    /*width: 90%;*/
+    border: 5px solid #fff;
 }
 #picture-card {
     background: transparent;
     border-style: none;
     animation: fade-in 3s 1;
-    background-size: auto;
+    /*background-size: auto;*/
     box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
 }
 @keyframes fade-in {
