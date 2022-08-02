@@ -8,20 +8,65 @@
         margin: auto;
     }
 }
+/*media queries for mobile response*/
 @media (max-width: 480px) {
+    #picture-card{
+        top: -100px;
+    }
+    .first-icon {
+        margin-left: -25%;
+    }
+    .second-icon {
+        margin-top: -46%;
+        margin-left: 17%;
+    }
+    .third-icon {
+        margin-left: 55%;
+        margin-top: -80%;
+    }
+    .icon-span-1 {
+     color: transparent;
+    }
+    .icon-span-2 {
+      color: transparent;
+    }
+    .icon-span-3 {
+        color: transparent;
+    }
+    .icon-span-3:hover {
+        text-decoration: none;
+    }
+    a, a:hover {
+        text-decoration: none;
+    }
     .media-body {
         margin-left: -75%;
+        /*margin-top: -5%;*/
     }
     .header-button {
-        margin-left: -10%;
-        margin-top: 1%;
+        margin-left: -11%;
+        margin-top: -35%;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer-title, .footer-subtext {
+        text-align: center;
     }
 }
 
+/*primary container*/
 .container-fluid {
     position: relative;
 }
 
+/*container in head section*/
+.jumbotron {
+    height: 100vh;
+    background: transparent;
+}
+
+/*background for head section where pic and gsap titles are held*/
 .jumbotron-background {
     position: fixed;
     right: 0;
@@ -31,24 +76,13 @@
     opacity: .2;
 }
 
-.mr-3:hover {
-    cursor: pointer;
-}
-
-.mt-0 {
-    color: #1a2f5e;
-}
-.mt-0:hover {
-    color: #51477b;
-}
-
-
-
+/*class holding column divs*/
 .animation {
     width: 100%;
     height: 100%;
 }
 
+/*columns in background - consist of keyframe animations for opacity and height-shifting*/
 .column1 {
     min-height: 100vh;
     width: 172px;
@@ -156,35 +190,7 @@
     animation-delay: 4.5s;
 }
 
-
-
-
-.jumbotron {
-    height: 100vh;
-    background: transparent;
-
-}
-
-
-
-#picture-card {
-    background: transparent;
-    border-style: none;
-    animation: fade-in 3s 1;
-    background-size: auto;
-    /*background: linear-gradient(to left, #c6bef6, #fff);*/
-    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
-}
-@keyframes fade-in {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-
-}
-
+/*welcome text transitioning in head when page opened*/
 .welcome-text {
     position: absolute;
     left: 35%;
@@ -195,26 +201,46 @@
     border-style: none;
 }
 
+/*for font in cards*/
 .card-text {
     font-family: 'Numans', sans-serif;
 }
 
-/*.welcome-par-1 {*/
-/*    font-family: 'Numans', sans-serif;*/
-/*}*/
-
-/*.welcome-par-2 {*/
-/*    font-family: 'Numans', sans-serif;*/
-/*}*/
-
-
-.mb-3 {
-    background-size: auto;
-    background: linear-gradient(to left, #c6bef6, #fff);
-    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
-    border-top: 1px solid #fff;
+/*in divs with class media-body*/
+.mt-0 {
+    color: #1a2f5e;
+}
+.mt-0:hover {
+    color: #51477b;
+}
+.mr-3:hover {
+    cursor: pointer;
 }
 
+/*card containing picture of self; has attributed to it keyframe animation for fade-in opacity*/
+.rounded-circle {
+    margin: 10px auto;
+    /*height: 90%;*/
+    /*width: 90%;*/
+    border: 5px solid #fff;
+}
+#picture-card {
+    background: transparent;
+    border-style: none;
+    animation: fade-in 3s 1;
+    /*background-size: auto;*/
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*button in head section titled Projects*/
 .header-button {
     position: absolute;
     width: 150px;
@@ -228,6 +254,7 @@
     display: block;
     box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
 }
+/*for actual word Projects*/
 span.header-button-span {
     position: absolute;
     margin-left: -18.5%;
@@ -236,30 +263,32 @@ span.header-button-span {
     color: #1a2f5e;
 }
 
+/*shadow-change on hover*/
 .shadow-enter:hover {
     animation: shadow-change 1s ease-in-out;
-    /*display: none;*/
 }
 @keyframes shadow-change {
     0% {
         box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
     }
-    /*}*/
     50%{
         box-shadow: none;
     }
-    /*40% {*/
-    /*    -webkit-transform: translateY(-2px);*/
-    /*    transform: translateY(-2px);*/
-    /*}*/
-
     100% {
         box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
     }
 }
 
+/*this class is in div holding card-body class divs in body of site*/
+.mb-3 {
+    background-size: auto;
+    background: linear-gradient(to left, #c6bef6, #fff);
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+    border-top: 1px solid #fff;
+}
 
-.sky {
+/*affiliated to mp4s within cards in body section*/
+.video {
     width: 50%;
     height: 50%;
     margin: 0 auto;
@@ -270,9 +299,14 @@ span.header-button-span {
 .footer {
     color: #fff;
     background-color: #1a2f5e;
+    height: 55%;
 }
 .footer-subtext {
     color: #e5c84f;
+    text-decoration: none;
+}
+.footer-link a, .footer-link a:hover {
+    text-decoration: none;
 }
 .footer-link {
     list-style-type: none;
