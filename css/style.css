@@ -1,7 +1,7 @@
 * {
     font-family: 'Baloo Paaji 2', cursive;
     color: #1a2f5e;
-    outline: 1px solid #f00 !important;
+    /* outline: 1px solid #f00 !important; */
 }
 
 @media (max-width: 767px) {
