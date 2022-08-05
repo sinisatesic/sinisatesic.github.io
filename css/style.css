@@ -44,8 +44,8 @@
     }
     .header-button {
         position: relative;
-        margin-left: -15%;
-        margin-top: -200px;
+        margin-left: -58px;
+        margin-top: -90px;
     }
     .footer {
         text-align: center;
@@ -211,9 +211,14 @@
     border-style: none;
 }
 
+.card-title {
+    text-align: center;
+}
+
 /*for font in cards*/
 .card-text {
     font-family: 'Numans', sans-serif;
+    text-align: center;
 }
 
 /*in divs with class media-body*/
@@ -259,7 +264,7 @@
     border: 3px solid #1a2f5e;
     background-color: #dcdef5;
     left: 44.5%;
-    top: 16%;
+    /* top: 16%; */
     text-align: center;
     display: block;
     box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
@@ -301,10 +306,7 @@ span.header-button-span {
 
 /*affiliated to mp4s within cards in body section*/
 .video {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-    border-radius: 50%;
+    cursor: pointer;
 }
 
 /*footer section*/
