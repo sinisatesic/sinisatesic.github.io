@@ -297,7 +297,10 @@ span.header-button-span {
     }
 }
 
-
+.card-body {
+    position: relative;
+    margin: 0 auto;
+}
 
 /*this class is in div holding card-body class divs in body of site*/
 .mb-3 {
