@@ -12,12 +12,12 @@
 /*media queries for mobile response*/
 @media (max-width: 480px) {
     #picture-card{
-        top: -100px;
+        top: -50px;
     }
    
     .second-icon {
-        margin-top: -46%;
-        margin-left: 33.7%;
+        margin-top: -53%;
+        margin-left: 50%;
     }
     .third-icon {
         margin-left: 65%;
@@ -43,9 +43,12 @@
         /*margin-top: -5%;*/
     }
     .header-button {
-        position: relative;
-        margin-left: -58px;
-        margin-top: -90px;
+        position: absolute;
+        margin-left: -60px;
+        /* margin: 0 auto;
+        width: 50%; */
+        /* margin-left: -58px;
+        margin-top: -90px; */
     }
     .footer {
         text-align: center;
@@ -293,6 +296,7 @@ span.header-button-span {
         box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
     }
 }
+
 
 
 /*this class is in div holding card-body class divs in body of site*/
