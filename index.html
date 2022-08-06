@@ -40,20 +40,20 @@
 <!--                    welcome in header in spans; for gsap "type-in" animation-->
                     <h5 class="card-title welcome-title">
 <!--                        classes linked to gsap animation on main.js-->
-                        <span class="welcome-span-w">W</span>
-                        <span class="welcome-span-e">e</span>
-                        <span class="welcome-span-l">l</span>
-                        <span class="welcome-span-c">c</span>
-                        <span class="welcome-span-o">o</span>
-                        <span class="welcome-span-m">m</span>
-                        <span class="welcome-span-second-e">e</span>
+                        <span class="welcome-span-w welcome-letters">W</span>
+                        <span class="welcome-span-e welcome-letters">e</span>
+                        <span class="welcome-span-l welcome-letters">l</span>
+                        <span class="welcome-span-c welcome-letters">c</span>
+                        <span class="welcome-span-o welcome-letters">o</span>
+                        <span class="welcome-span-m welcome-letters">m</span>
+                        <span class="welcome-span-second-e welcome-letters">e</span>
                     </h5>
 <!--                    classes linked to gsap animation on main.js-->
                     <p class="card-text welcome-par-1">I extend my gratitude for your visit.</p>
                     <p class="card-text welcome-par-2">Herein this site, I express my quest:</p>
                     <p class="card-text welcome-par-3">To join a team dedicated to collaboration and unceasing
                         growth.</p>
-                    <p class="card-text welcome-par-4">Your time and consideration is <span style="font-style: italic">truly</span> appreciated.</p>
+                    <p class="card-text welcome-par-4">Your time and consideration is truly appreciated.</p>
 
                 </div>
             </div>
@@ -63,15 +63,15 @@
                     <li class="media">
 <!--                        icons also linked to gsap animation on main.js-->
                         <div class="media-body">
-                            <a href="img/website-resume.pdf" target="_blank" class="mt-0 mb-1">
+                            <a href="img/website-resume.pdf" target="_blank" class="mt-0 mb-1 iconBackground">
                                 <img src="img/resume-icon.png" class="mr-3 pb-4 first-icon" alt="icon of resume">
                                 <span class="icon-span-1">Resume</span>
                             </a>
                         </div>
                     </li>
-                    <li class="media">
+                    <li class="media" style="margin-top: 20px;"">
                         <div class="media-body">
-                            <a href="https://www.linkedin.com/in/sinisa-tesic-st/" target="_blank" class="mt-0 mb-1">
+                            <a href="https://www.linkedin.com/in/sinisa-tesic-st/" target="_blank" class="mt-0 mb-1 iconBackground">
                                 <img src="img/linkedin-icon.png" class="mr-3 second-icon" alt="icon for LinkedIn">
                                 <span class="icon-span-2">LinkedIn</span>
                             </a>
@@ -91,7 +91,7 @@
 
             <!--            card in jumbotron-->
             <div id="picture-card" class="card" style="width: 18rem;">
-                <img src="img/my-pic.jpeg" class="card-img-top rounded-circle" alt="picture of myself, Sinisa Tesic">
+                <img src="img/my-pic.jpeg" class="card-img-top rounded-circle" id="my-pic" alt="picture of myself, Sinisa Tesic">
 
             <!--   card of pic of self and description-->
                 <div class="card-body text-center">
@@ -114,67 +114,158 @@
 
         <div class="row row-cols-1 row-cols-md-3 g-4" id="projectCards">
 
-            <div class="col">
+            <div class="col" align="center">
                 <div class="card h-100">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <video autoplay muted loop class="video">
                         <source src="/img/balkanac.mov">
                     </video>
                     <div class="card-body">
-                    <h5 class="card-title">Some of My Art and Such</h5>
-                    <p class="card-text">HTML | CSS | JS</p>
-                    </div>
+                        <h5 class="card-title">Some of My Art and Such</h5>
+                        <p class="card-text">HTML | CSS | JS</p>
+                        <div class="align-content-end">
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Project Link</span>
+                                </button>
+                            </a>
+                            <br>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">GitHub Link</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>    
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col" align="center">
                 <div class="card h-100">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <video autoplay muted loop class="video">
                         <source src="/img/cssPourty.mov">
                     </video>
                     <div class="card-body">
-                    <h5 class="card-title">Happy, HAPPY CSS Party</h5>
-                    <p class="card-text">HTML | CSS</p>
+                        <h5 class="card-title">Happy, HAPPY CSS Party</h5>
+                        <p class="card-text">HTML | CSS</p>
+                        <div>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Project Link</span>
+                                </button>
+                            </a>
+                            <br>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">GitHub Link</span>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col" align="center">
                 <div class="card h-100">
                     <!-- <img src="/img/coinsProjectScreenShot.png" class="card-img-top" alt="..."> -->
                     <video autoplay muted loop class="video">
                         <source src="/img/coinVid.mov">
                     </video>
                     <div class="card-body">
-                    <h5 class="card-title">Crypto Coins Project (No tutorial help (which I'm proud of))</h5>
-                    <p class="card-text">HTML | CSS | JS | GSAP | CoinGecko API</p>
+                        <h5 class="card-title">Crypto Coins Project</h5>
+                        <p class="card-text">HTML | Bulma | JS | GSAP | CoinGecko API</p>
+                        <div>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Project Link</span>
+                                </button>
+                            </a>
+                            <br>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">GitHub Link</span>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col" align="center">
                 <div class="card h-100">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <video autoplay muted loop class="video">
                         <source src="/img/beats.mov">
                     </video>
                     <div class="card-body">
-                    <h5 class="card-title">Beat Creator. Boots and Cats, Yeah?</h5>
-                    <p class="card-text">HTML | CSS | JS | Audio files</p>
+                        <h5 class="card-title">Beat Creator. Boots and Cats, Yeah?</h5>
+                        <p class="card-text">HTML | CSS | JS | Audio files</p>
+                        <div>
+                            <a href="https://sinisatesic.github.io/beats.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Project Link</span>
+                                </button>
+                            </a>
+                            <br>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">GitHub Link</span>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col" align="center">
                 <div class="card h-100">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <video autoplay muted loop class="video">
                         <source src="/img/zoe.mov">
                     </video>
                     <div class="card-body">
-                    <h5 class="card-title">Zoe Wood - Digital Portfolio</h5>
-                    <p class="card-text">HTML | CSS | JS | GSAP | Zoe Wood Artwork</p>
+                        <h5 class="card-title">Zoe Wood - Digital Portfolio</h5>
+                        <p class="card-text">HTML | CSS | JS | GSAP | Zoe Wood Artwork</p>
+                        <div>
+                            <a href="https://sinisatesic.github.io/zaZoe.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Project Link</span>
+                                </button>
+                            </a>
+                            <br>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Github Link</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col" align="center">
+                <div class="card h-100">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <video autoplay muted loop class="video">
+                        <source src="/img/portSite.mov"> 
+                    </video>
+                    <div class="card-body">
+                        <h5 class="card-title">Inception!</h5>
+                        <p class="card-text">HTML | Bootstrap | JS | GSAP</p>
+                        <div>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Project Link</span>
+                                </button>
+                            </a>
+                            <br>
+                            <a href="https://sinisatesic.github.io/index.html" target="_blank">
+                                <button type="button" class="shadow-enter" disabled>
+                                    <span class="project-links">Github Link</span>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

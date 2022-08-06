@@ -142,3 +142,17 @@ t8.from(".header-button", 3, {
     ease: Expo.easeInOut
 }, "-=5");
 
+var t9 = new TimelineMax();
+
+t9.from("#my-pic", 3, {
+    delay: 0.6,
+    opacity: 0,
+    x: 50,
+    ease: Expo.easeInOut
+}).from("#my-pic", 3, {
+    delay: 0.6,
+    opacity: 0,
+    x: 50,
+    ease: Expo.easeInOut
+}, "-=5");
+

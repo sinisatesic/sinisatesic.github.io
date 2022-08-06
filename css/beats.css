@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bungee Outline', cursive;
+    background-color: #b9fac2;
+}
+i, svg {
+    pointer-events: none;
+    /*to ensure mute button can be clicked for intended functionality */
+}
+
+h1 {
+    animation: shifty 1s infinite ease-in-out;
+}
+@keyframes shifty {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.title {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad,
+.perc-pad,
+.clap-pad,
+.tom-pad,
+.horn-pad,
+.string-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+    /*border-radius: 50%;*/
+    clip-path: polygon(0% 15%, 60% 58%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    box-shadow: 0 12px 12px -12px black;
+}
+.kick-pad {
+    background: lightblue;
+}
+.snare-pad {
+    background: violet;
+}
+.hihat-pad {
+    background: lightseagreen;
+}
+.perc-pad {
+    background: #ff6f47;
+}
+.clap-pad {
+    background: crimson;
+}
+.tom-pad {
+    background: #84ab67;
+}
+.horn-pad {
+    background: #d4c850;
+}
+.string-pad {
+    background: maroon;
+}
+
+/*when tiles are active their background color to change:*/
+.kick-pad.active {
+    background: blue;
+}
+.snare-pad.active {
+    background: purple;
+}
+.hihat-pad.active {
+    background: teal;
+}
+.perc-pad.active {
+    background: orangered;
+}
+.clap-pad.active {
+    background: darkred;
+}
+.tom-pad.active {
+    background: darkgreen;
+}
+.horn-pad.active {
+    background: goldenrod;
+}
+.string-pad.active {
+    background-color: black;
+}
+
+
+.kick-track,
+.snare-track,
+.hihat-track,
+.perc-track,
+.clap-track,
+.tom-track,
+.horn-track,
+.string-track {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.sequencer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kick,
+.snare,
+.hihat,
+.perc,
+.clap,
+.tom,
+.horn,
+.string {
+    display: flex;
+    margin-left: 5%;
+}
+
+.controls {
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+}
+.controls button {
+    padding: 1rem;
+    border: none;
+    background: grey;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    transition: all .5s ease;
+    border-radius: 50%;
+}
+
+.pad {
+    transition: all .5s ease;
+}
+
+.play {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 100vmax;
+    cursor: pointer;
+    margin: 3rem;
+    transition: all .5s ease;
+}
+.play:hover {
+    transition: all .5s ease;
+    background-color: #d45757;
+}
+
+select {
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 100vmax;
+    margin-top: 15px;
+}
+
+.mute.active {
+    background: lightgrey;
+
+}
+
+.tempo {
+    margin: 3rem;
+    width: 25%;
+}
+.tempo p {
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+.tempo-change {
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background-color: grey;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+
+/*below are keyframes for playTrack animation in repeat function*/
+@keyframes playTrack {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+
+

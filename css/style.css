@@ -16,12 +16,15 @@
     }
    
     .second-icon {
-        margin-top: -53%;
-        margin-left: 50%;
+        margin-top: -23%;
+        margin-left: -1%;
     }
-    .third-icon {
-        margin-left: 65%;
-        margin-top: -80%;
+    /* .third-icon {
+        /* margin-left: 65%; */
+        /* margin-top: -80%; */
+    /* } */
+    .iconBackground {
+        color: transparent;
     }
     .icon-span-1 {
      color: transparent;
@@ -50,6 +53,7 @@
         /* margin-left: -58px;
         margin-top: -90px; */
     }
+
     .footer {
         text-align: center;
     }
@@ -84,6 +88,17 @@
 .animation {
     width: 100%;
     height: 100%;
+}
+
+.icon-span-1, .icon-span-2 {
+    color: #1a2f5e;
+}
+.first-icon:hover {
+    background-color: transparent;
+}
+
+.iconBackground:hover {
+    background-color: transparent;
 }
 
 .col {
@@ -245,9 +260,11 @@
 #picture-card {
     background: transparent;
     border-style: none;
-    animation: fade-in 3s 1;
+    /* animation: fade-in 3s 1; */
     /*background-size: auto;*/
-    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+    /* box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22); */
+    margin: auto 0;
+    /* position: absolute; */
 }
 @keyframes fade-in {
     0%{
@@ -273,12 +290,53 @@
     box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
 }
 /*for actual word Projects*/
-span.header-button-span {
+.header-button-span {
     position: absolute;
     margin-left: -18.5%;
     margin-top: -8%;
     text-align: center;
     color: #1a2f5e;
+}
+
+.welcome-letters {
+    color: #000;
+}
+
+span, a {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100vmax;
+}
+span:hover {
+    color: #1a2f5e;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    transition: ease-out 295ms;
+    background-color: #FFF7A1;
+    color: #1a2f5e;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+button {
+    border-radius: 100vmax;
+    border: 3px solid #1a2f5e;
+    background-color: #1a2f5e;
+    color: #fff;
+    text-align: center;
+    display: block;
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+button:hover {
+    transition: ease-out 295ms;
+    background-color: #FFF7A1;
+    border-radius: 100vmax;
+    color: #1a2f5e;
+    cursor: pointer;
 }
 
 /*shadow-change on hover*/
@@ -312,9 +370,6 @@ span.header-button-span {
 }
 
 /*affiliated to mp4s within cards in body section*/
-.video {
-    cursor: pointer;
-}
 
 /*footer section*/
 .footer {
