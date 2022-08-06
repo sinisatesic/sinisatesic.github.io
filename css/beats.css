@@ -143,11 +143,11 @@ button:focus {
     margin-left: 5%;
 }
 
-.controls {
+/* .controls {
     /*display: flex;*/
     /*justify-content: space-between;*/
     /*align-items: center;*/
-}
+/* } */ 
 .controls button {
     padding: 1rem;
     border: none;
