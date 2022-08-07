@@ -30,10 +30,18 @@ const burger = document.getElementById('burger');
 // let valueOfSearchInput = searchInput.value;
 // let stringValueInput = valueOfSearchInput.toString();
 
-
-
-
-
+const scrollToTop = () => {
+    let buttonTop = document.createElement('button');
+    // let breakEle = document.createElement('br');
+    buttonTop.classList.add('scroll')
+    let container = document.getElementById('containerYes');
+        buttonTop.innerHTML = 'scroll to top';
+        buttonTop.addEventListener('click', () => {
+            window.scrollTo(0, 0);
+        })
+        container.appendChild(buttonTop);
+        // container.appendChild(breakEle);
+}
 
 
 
@@ -97,7 +105,7 @@ const getSearchResults = async () => {
     })
 
 
-    searchCoins.forEach(coin => {
+    searchCoins.forEach((coin, currentIteration, array) => {
         let columns = document.createElement('div');
         columns.classList.add('columns');
         
@@ -128,42 +136,17 @@ const getSearchResults = async () => {
     
 
         container.appendChild(columns);
-       
-        
+     
+
+        if (currentIteration === array.length - 1){
+            scrollToTop();
+        }
+
     })
 
-
-
-   ////
-    // getSearchJSON.exchanges.forEach(e => {
-    // let columns = document.createElement('div');
-    // columns.classList.add('columns');
-   
-    // let card = document.createElement('div');
-    // card.classList.add('card');
-   
-    // let cardContent = document.createElement('div');
-    // cardContent.classList.add('card-content');
-   
-    // let content = document.createElement('div');
-    // content.classList.add('content');
-//    })
-
-//    content.innerHTML = `
-//    <span style="color: black; font-family: Courier New; font-weight: bold">${e.id}</span>
-//    <div>Name: <span style="color: purple;">${e.id}</span></div>
-//    <div>Market Type: <span style="color: purple;">${e.market_type}</span></div>
-//    `;
-  
-//    cardContent.appendChild(content);
-//    card.appendChild(cardContent);
-//    columns.appendChild(card);
-//    container.appendChild(columns);
+    
 }
-searchButton.addEventListener('click', (e) => {
-   
-    getSearchResults();
-})
+
 
 
 const audio = new Audio("/audio/chalo.mp3");
@@ -171,46 +154,7 @@ document.addEventListener('click', () => {
     audio.play();
 });
 
-// console.log(searchBar);
-// searchBar.addEventListener('keyup', (e) => {
-// const searchString = e.target.value;
-// const filteredCoins = jsonPrices.filter( coin => {
-// return coin.name.includes(searchString) || coin.symbol.includes(searchString);
-// });
-// console.log(filteredCoins);
-// getPrices(filteredCoins);
-// });
 
-// console.log(searchBar);
-// searchBar.addEventListener('keyup', (e) => {
-// const searchString = e.target.value;
-// // container.innerHTML = '';
-// // container.append(jsonTrends.name.includes(searchString))
-// if(firstText.innerHTML.includes(searchString)){
-// container.append(getTrends.innerHTML);
-// }
-// // const filteredCoins = jsonTrends.coins.filter( coin => {
-// // return coin.name.includes(searchString) || coin.symbol.includes(searchString);
-// // });
-// // console.log(filteredCoins);
-// // getPrices(filteredCoins);
-// });
-
-// const search = () => {
-// searchBar.addEventListener('keyup', (e) => {
-// let searchString = e.target.value;
-// let body = document.getElementsByTagName('body');
-// for(i = 0; i < firstText.length; i++){
-// if(firstText[i].innerHTML == searchString){
-// let filtered = body.filter( e => {
-// return firstText[i];
-// })
-// // return filtered;
-// console.log(filtered);
-// }
-// }
-// })
-// }
 
 //for burger for mobile:
 burger.addEventListener('click', () => {
@@ -236,7 +180,7 @@ const getTrends = async () => {
  const response = await fetch(trendingAPI);
  jsonTrends = await response.json();
 
- jsonTrends.coins.forEach(e => {
+ jsonTrends.coins.forEach((e, currentIteration, array) => {
 
  let firstColumn = document.createElement('div');
  firstColumn.classList.add('column');
@@ -266,6 +210,11 @@ const getTrends = async () => {
  firstColumn.appendChild(firstCard);
  container.appendChild(firstColumn);
 
+
+    if (currentIteration === array.length - 1){
+        scrollToTop();
+    }
+
  });
 };
 
@@ -289,7 +238,7 @@ const getCoins = async () => {
  const responseCoins = await fetch(coinsAPI);
  const jsonCoins = await responseCoins.json();
 
- jsonCoins.forEach(e => {
+ jsonCoins.forEach((e, currentIteration, array) => {
  let secondColumn = document.createElement('div');
  secondColumn.classList.add('column');
 
@@ -337,6 +286,12 @@ const getCoins = async () => {
  secondCard.appendChild(secondCardContent);
  secondColumn.appendChild(secondCard);
  container.appendChild(secondColumn);
+
+
+    if (currentIteration === array.length - 1){
+        scrollToTop();
+    }
+
  });
 };
 
@@ -356,7 +311,7 @@ const getCategoriesInfo = async () => {
  console.log(categoriesJSON);
 
 
- categoriesJSON.forEach(e => {
+ categoriesJSON.forEach((e, currentIteration, array) => {
  let columns = document.createElement('div');
  columns.classList.add('columns');
 
@@ -384,66 +339,13 @@ let textContent = e.content == "" || e.content == null ? "No description" : e.co
  card.appendChild(cardContent);
  columns.appendChild(card);
  container.appendChild(columns);
+
+    if (currentIteration === array.length - 1){
+        scrollToTop();
+    }
+
  });
 };
-
-
-
-
-
-
-
-
-
-const getPlatformsInfo = async () => {
- container.innerHTML = '';
-
- const platformsResponse = await fetch(assetPlatforms);
- const platformValue = await platformsResponse.json();
-
- console.log(platformValue)
-
-//  const fiPlatformsResponse = await fetch(fiPlatformsAPI);
-//  const jsonFiPlatforms = await fiPlatformsResponse.json();
-
-//  let columns = document.createElement('div');
-//  columns.classList.add('columns');
-//  columns.classList.add('is-multiline');
-
-// jsonFiPlatforms.forEach(e => {
-
-//  let column = document.createElement('div');
-//  column.classList.add('column');
-//  column.classList.add('is-one-quarter');
-
-//  let card = document.createElement('div');
-//  card.classList.add('card');
-
-//  let cardContent = document.createElement('div');
-//  cardContent.classList.add('card-content');
-
-//  let content = document.createElement('div');
-//  content.classList.add('content');
-
-//  content.innerHTML = `
-//  <span style="color: black; font-family: Courier New; font-size: 1.5rem;">${e.name}</span>
-//  <div>Type: <span style="color: purple;">${e.category}</span></div>
-//  <div>URL: <a href="${e.website_url}">${e.website_url}</a></div>
-//  `
-
-//  cardContent.appendChild(content);
-//  card.appendChild(cardContent);
-//  column.appendChild(card);
-//  columns.appendChild(column);
- 
-// });
-// container.appendChild(columns);
-};
-
-
-
-
-
 
 
 
@@ -454,26 +356,9 @@ const getDerivatives = async () => {
  const derivativesResponse = await fetch(derivativesAPI);
  const derivativesJSON = await derivativesResponse.json();
 
- console.log(derivativesJSON);
+//  console.log(derivativesJSON);
 
-//  let columns = document.createElement('div');
-//  columns.classList.add('columns');
-//  columns.classList.add('is-multiline');
-
-//  let column = document.createElement('div');
-//  column.classList.add('column');
-//  column.classList.add('is-one-quarter');
-
-//  let card = document.createElement('div');
-//  card.classList.add('card');
-
-//  let cardContent = document.createElement('div');
-//  cardContent.classList.add('card-content');
-
-//  let content = document.createElement('div');
-//  content.classList.add('content');
-
- derivativesJSON.forEach(e => {
+ derivativesJSON.forEach((e, currentIteration, array) => {
 
 let columns = document.createElement('div');
 columns.classList.add('columns');
@@ -513,12 +398,11 @@ let derivativeEstablished = e.year_established === null || e.year_established ==
  columns.appendChild(card);
  container.appendChild(columns);
 
-//  cardContent.appendChild(content);
-//  card.appendChild(cardContent);
-//  column.appendChild(card);
-//  columns.appendChild(column);
+    if (currentIteration === array.length - 1){
+        scrollToTop();
+    }
+
  });
-//  container.appendChild(columns);
 };
 
 
@@ -764,16 +648,6 @@ const getGlobalInfo = async () => {
 }
 
 
-// console.log(searchBar);
-// searchBar.addEventListener('keyup', (e) => {
-// const searchString = e.target.value;
-// const filteredCoins = jsonPrices.filter( coin => {
-// // return coin.name.includes(searchString) || coin.symbol.includes(searchString);
-// });
-// // console.log(filteredCoins);
-// // getPrices(filteredCoins);
-// });
-////// getGlobalInfo();
 
 
 
@@ -782,14 +656,8 @@ const getGlobalInfo = async () => {
 
 
 
-// event listeners:
-// trendingButton.addEventListener('click', getTrends);
-// popularButton.addEventListener('click', getPrices);
-// newsButton.addEventListener('click', getCategoriesInfo);
-// platformsButton.addEventListener('click', getPlatformsInfo);
-// productsButton.addEventListener('click', getProductsInfo)
-// globalButton.addEventListener('click', getGlobalInfo);
-/////
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
  trendingButton && trendingButton.addEventListener('click', getTrends);
@@ -798,9 +666,13 @@ document.addEventListener("DOMContentLoaded", () => {
  platformsButton && platformsButton.addEventListener('click', getPlatformsInfo);
  derivativesButton && derivativesButton.addEventListener('click', getDerivatives);
  globalButton && globalButton.addEventListener('click', getGlobalInfo);
+ searchButton && searchButton.addEventListener('click', getSearchResults);
 });
 
-
+// searchButton.addEventListener('click', (e) => {
+   
+//     getSearchResults();
+// })
 
 
 
