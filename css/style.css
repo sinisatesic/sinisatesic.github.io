@@ -14,15 +14,17 @@
     #picture-card{
         top: -50px;
     }
-   
-    .second-icon {
-        margin-top: -23%;
+    .first-icon {
+        margin-top: 5%;
         margin-left: -1%;
     }
-    /* .third-icon {
-        /* margin-left: 65%; */
-        /* margin-top: -80%; */
-    /* } */
+   
+    .second-icon {
+        margin-top: -10%;
+        margin-left: -1%;
+        padding-bottom: 40px;
+    }
+    
     .iconBackground {
         color: transparent;
     }
@@ -275,6 +277,10 @@
     }
 }
 
+#my-pic {
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+}
+
 /*button in head section titled Projects*/
 .header-button {
     position: absolute;
@@ -314,7 +320,6 @@ span:hover {
 }
 a:hover {
     transition: ease-out 295ms;
-    background-color: #FFF7A1;
     color: #1a2f5e;
     cursor: pointer;
     text-decoration: none;
@@ -359,6 +364,11 @@ button:hover {
     position: relative;
     margin: 0 auto;
 }
+
+/* .github-buttons {
+    margin-top: 20%;
+} */
+
 
 /*this class is in div holding card-body class divs in body of site*/
 .mb-3 {

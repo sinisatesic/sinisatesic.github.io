@@ -265,10 +265,13 @@
     text-shadow: .5px .5px black;
   }
 
+
   div.card {
       margin: 10px;
       overflow: hidden;
   }
+
+  
 
   div.card-content {
       background-color: #d4ff91;

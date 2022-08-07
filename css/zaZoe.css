@@ -47,21 +47,6 @@
     color: #fff;
 }
 
-/* #first-name-Z {
-    animation: bouncy 1s infinite;
-    /* animation-delay: 2s; */
-/* }
-@keyframes bouncy {
-    0% {
-        transform: translate3d(0, 0, 0)
-    }
-    50% {
-        transform: translate3d(-120px, 0, 0)
-    }
-    100% {
-        transform: translate3d(0, 0, 0)
-    }
-} */
 
 .moving-letters {
     animation: bouncingLetters 4s infinite ease-out;
