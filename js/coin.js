@@ -149,10 +149,10 @@ const getSearchResults = async () => {
 
 
 
-const audio = new Audio("/audio/chalo.mp3");
-document.addEventListener('click', () => {
-    audio.play();
-});
+// const audio = new Audio("/audio/chalo.mp3");
+// document.addEventListener('click', () => {
+//     audio.play();
+// });
 
 
 
