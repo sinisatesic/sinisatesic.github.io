@@ -1,0 +1,20 @@
+{
+  "name": "sinisatesic.github.io",
+  "version": "1.0.0",
+  "description": "Bonjour!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinisatesic/sinisatesic.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinisatesic/sinisatesic.github.io/issues"
+  },
+  "homepage": "https://github.com/sinisatesic/sinisatesic.github.io#readme"
+}
