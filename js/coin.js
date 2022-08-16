@@ -26,10 +26,13 @@ const globalButton = document.getElementById('globalButton');
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
 const burger = document.getElementById('burger');
+
 // const assetPlatforms = document.getElementById('a')
 // let valueOfSearchInput = searchInput.value;
 // let stringValueInput = valueOfSearchInput.toString();
 
+
+//
 const scrollToTop = () => {
     let buttonTop = document.createElement('button');
     // let breakEle = document.createElement('br');
@@ -42,6 +45,12 @@ const scrollToTop = () => {
         container.appendChild(buttonTop);
         // container.appendChild(breakEle);
 }
+
+
+// for span showing pixel length of scrolling
+window.addEventListener('scroll', () => {
+    document.getElementById('current-scroll').innerHTML = `${window.pageYOffset}px`;
+  });
 
 
 
