@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    /*width: ma;*/
+    /*background-color: snow;*/
+}
+
+html {
+    background-color: #ea907a;
+}
+
+.native-full-screen {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 100px;
+    /*margin-top: 100px;*/
+    left: 50%;
+    height: 100vh;
+    background-color: #84ab67;
+    background-image: url("../img/sur.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.full-screen-card {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border: 3px solid red;
+    text-align: center;
+    border-radius: 100vmax;
+    padding: 10px 0;
+    /*background-color: #84ab67;*/
+    left: 75%;
+    color: white;
+    background-image: url("../img/sur.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: .6;
+}
+.fsc-text {
+    color: #fff;
+    opacity: 1;
+    left: 72%;
+    top: 40%;
+    position: absolute;
+    border: 2px solid gold;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+
+.jumbotron {
+    -webkit-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    -moz-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    font-weight: bolder;
+    background-image: url("../img/book.jpg");
+    background-size: cover;
+    background-position: center;
+}
+div.jumbotron {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bolder;
+}
+
+.mini-jumbo {
+    background-color: #e3fafc;
+    height: 100%;
+    width: 100%;
+    margin: auto 0;
+    opacity: .8;
+    padding: 15px;
+    border-radius: 15px;
+}
+div.mini-jumbo p {
+    font-family: 'Cabin', sans-serif;
+    color: #0f114f;
+    opacity: 1;
+    font-weight: bolder;
+    font-size: 1.50rem;
+}
+div.mini-jumbo h1 {
+    font-family: 'Libre Baskerville', serif;
+    color: #0f114f;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+p.lead {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+    /*outline: 1px solid white;*/
+}
+
+.logo {
+    background-image: url("../img/logoccil.png");
+    background-position: center;
+    background-size: cover;
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    left: 35px;
+    position: relative;
+    /*clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);*/
+
+}
+
+.logo-span {
+    color: white;
+    font-size: 3.5rem;
+    margin-left: 3%;
+    margin-top: 3%;
+    position: absolute;
+}
+
+/*.jumbotron {*/
+/*    background: salmon;*/
+/*    color: red;*/
+/*}*/
+
+/*.navbar ul {*/
+/*    background-color: #C3EECF;*/
+/*    text-align: center;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*    width: 100%;*/
+/*}*/
+
+/*li {*/
+/*    padding: 10px;*/
+/*}*/
+/*!* change the brand and text color *!*/
+/*.navbar-custom .navbar-brand,*/
+/*.navbar-custom .navbar-text {*/
+/*    color: rgba(255,255,255,.8);*/
+/*}*/
+/*!* change the link color *!*/
+/*.navbar-custom .navbar-nav .nav-link {*/
+/*    color: rgba(255,255,255,.5);*/
+/*}*/
+/*!* change the color of active or hovered links *!*/
+/*.navbar-custom .nav-item.active .nav-link,*/
+/*.navbar-custom .nav-item:hover .nav-link {*/
+/*    color: #ffffff;*/
+/*}*/
+
+
+/*.slideshow-container {*/
+/*    !*max-width: 1000px;*!*/
+/*    !*max-height: 500px;*!*/
+/*    position: relative;*/
+/*}*/
+
+div.container-fluid {
+    background-color: #f4f7c5;
+}
+
+.navbar {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #e3fafc;
+    z-index: 1;
+}
+
+
+.reg-card {
+    transition: 3.5ms all ease;
+    cursor: pointer;
+    overflow: hidden;
+    size: .25rem;
+}
+
+
+div.card.reg-card.cardy {
+    background-color: #e3fafc;
+    border: 3px dashed #cce8eb;
+}
+
+.cardy{
+    transition: 3.5ms all ease-in;
+    overflow: hidden;
+    size: 2.5rem;
+    background-color: #e3fafc;
+    -webkit-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    -moz-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+}
+.cardy:hover {
+    animation: enlarge .55s ease-out;
+    cursor: pointer;
+}
+@keyframes enlarge {
+    0%{
+        transform: scale(1);
+    }
+    35%{
+        transform: scale(1.02);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+div.card.mb-3 {
+    padding-top: 15px;
+    margin: 10px auto;
+
+}
+img.card-img {
+    /*border-radius: 50%;*/
+}
+div.card.mb-3 {
+    background-color: #fbc687;
+}
+div.col-md-8 {
+    background-color: #fbc687;
+}
+
+.carousel {
+    padding-top: 25px;
+}
+
+.card-img-top {
+
+}
+div.card {
+    margin: 0 auto;
+
+}
