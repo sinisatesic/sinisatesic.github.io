@@ -47,14 +47,7 @@
         margin-left: -75%;
         /*margin-top: -5%;*/
     }
-    .header-button {
-        position: absolute;
-        margin-left: -60px;
-        /* margin: 0 auto;
-        width: 50%; */
-        /* margin-left: -58px;
-        margin-top: -90px; */
-    }
+
 
     .footer {
         text-align: center;
@@ -297,11 +290,10 @@
 }
 /*for actual word Projects*/
 .header-button-span {
-    position: absolute;
-    margin-left: -18.5%;
-    margin-top: -8%;
-    text-align: center;
     color: #1a2f5e;
+}
+.header-button-span:hover {
+    color: #fff;
 }
 
 .welcome-letters {
@@ -359,6 +351,22 @@ button:hover {
         box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
     }
 }
+
+.project-enter:hover {
+    animation: shadow-change 1s ease-in-out;
+}
+@keyframes shadow-change {
+    0% {
+        box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
+    }
+    50%{
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 0 11px 15px rgba(0, 0, 0, 0.30), 0 12px 12px rgba(0, 0, 0, 0.22);
+    }
+}
+
 
 .card-body {
     position: relative;
