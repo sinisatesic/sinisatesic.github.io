@@ -105,6 +105,10 @@
     overflow-x: hidden;
 }
 
+#current-scroll {
+    font-size: 12px;
+}
+
 /*columns in background - consist of keyframe animations for opacity and height-shifting*/
 .column1 {
     min-height: 100vh;

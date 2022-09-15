@@ -19,8 +19,8 @@ const derivativesButton = document.getElementById('derivativesButton');
 const globalButton = document.getElementById('globalButton');
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
+const audioButton = document.getElementById('audioButton');
 const burger = document.getElementById('burger');
-
 
 //
 const scrollToTop = () => {
@@ -40,7 +40,34 @@ window.addEventListener('scroll', () => {
     document.getElementById('current-scroll').innerHTML = `${window.pageYOffset}px`;
   });
 
+// for song
+  const audio = new Audio("/audio/chalo.mp3");
 
+  audioButton.addEventListener('click', () => {
+    //   toggleMusic();
+    if (audio.duration > 0 && !audio.paused){
+        audio.pause();
+        audioButton.innerHTML = `Resume`
+    } else {
+        audio.play();
+        audioButton.innerHTML = `STAHP`
+    }
+  });
+
+// to loop song if complete
+  audioButton.addEventListener('ended', () => {
+    this.play();
+  }, false);
+
+
+ 
+// const toggleMusic = () => {
+//     return audio.paused ? audio.play() : audio.pause();
+// }
+
+// audioButton.addEventListener('click', () => {
+//     toggleMusic();
+// });
 
 let searchValue;
 let modifiedSearch;
@@ -159,14 +186,6 @@ const getSearchResults = async () => {
         
     }
 }
-
-
-
-const audio = new Audio("/audio/chalo.mp3");
-document.addEventListener('click', () => {
-    audio.play();
-});
-
 
 
 //for burger for mobile:
