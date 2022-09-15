@@ -373,9 +373,10 @@ button:hover {
     margin: 0 auto;
 }
 
-/* .github-buttons {
-    margin-top: 20%;
-} */
+.centering {
+    position: absolute; /*Can also be `fixed`*/
+    margin-top: 50%;
+}
 
 
 /*this class is in div holding card-body class divs in body of site*/

@@ -2,18 +2,12 @@
 
 
 const derivativesAPI = `https://api.coingecko.com/api/v3/derivatives/exchanges`;
-
-
-// let searchAPI = `https://api.coingecko.com/api/v3/search`
-
-
 const coinsAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
 const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
 const categoriesAPI = `https://api.coingecko.com/api/v3/coins/categories`;
 const globalAPI = `https://api.coingecko.com/api/v3/global`;
 const searchAPI = `https://api.coingecko.com/api/v3/search?query=`
 const assetPlatforms = `https://api.coingecko.com/api/v3/asset_platforms`
-
 
 const container = document.getElementById('containerYes');
 const trendingButton = document.getElementById('trendingButton');
@@ -27,15 +21,10 @@ const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
 const burger = document.getElementById('burger');
 
-// const assetPlatforms = document.getElementById('a')
-// let valueOfSearchInput = searchInput.value;
-// let stringValueInput = valueOfSearchInput.toString();
-
 
 //
 const scrollToTop = () => {
     let buttonTop = document.createElement('button');
-    // let breakEle = document.createElement('br');
     buttonTop.classList.add('scroll')
     let container = document.getElementById('containerYes');
         buttonTop.innerHTML = 'scroll to top';
@@ -43,7 +32,6 @@ const scrollToTop = () => {
             window.scrollTo(0, 0);
         })
         container.appendChild(buttonTop);
-        // container.appendChild(breakEle);
 }
 
 
@@ -51,9 +39,6 @@ const scrollToTop = () => {
 window.addEventListener('scroll', () => {
     document.getElementById('current-scroll').innerHTML = `${window.pageYOffset}px`;
   });
-
-
-
 
 
 
@@ -72,7 +57,6 @@ const getSearchResults = async () => {
 
     const getSearch = await fetch(modifiedSearch);
     const getSearchJSON = await getSearch.json();
-    // let testy = JSON.stringify(getSearchJSON);
 
     console.log(getSearchJSON);
     console.log(getSearchJSON.coins);
@@ -81,87 +65,107 @@ const getSearchResults = async () => {
     let searchCoins = getSearchJSON.coins;
     let searchExchanges = getSearchJSON.exchanges;
 
-    searchExchanges.forEach(exchange => {
-        let exchangeColumns = document.createElement('div');
-        exchangeColumns.classList.add('columns');
 
-        let exchangeCard = document.createElement('div');
-        exchangeCard.classList.add('card');
-        exchangeCard.style.width = "100%"
+    let noResultColumn = document.createElement('div');
+    noResultColumn.classList.add('columns');
+    let noResultCard = document.createElement('div');
+    noResultCard.classList.add('card');
+    noResultCard.style.width = "100%"
+    let noResultCardContent = document.createElement('div');
+    noResultCardContent.classList.add('card-content');
+    noResultCardContent.style.textAlign = "center"
+    let noResultContent = document.createElement('div');
+    noResultContent.classList.add('content');
 
-        let exchangeCardContent = document.createElement('div');
-        exchangeCardContent.classList.add('card-content');
-        exchangeCardContent.style.textAlign = "center";
-
-        let exchangeContent = document.createElement('div');
-        exchangeContent.classList.add('content');
-
-        exchangeContent.innerHTML = `
-        <span style="color: black; font-family: Courier New; font-weight: bold">${exchange.id}</span>
-        <div>Name: <span style="color: purple;">${exchange.name}</span></div>
-        <div>Market Type: <span style="color: purple;">${exchange.market_type}</span></div>
-        <div><img src="${exchange.large}" style="padding-top: 10px;"></div>
-        `
-
-        exchangeCardContent.appendChild(exchangeContent);
-        exchangeCard.appendChild(exchangeCardContent);
-
-        exchangeColumns.appendChild(exchangeCard);
+    noResultContent.innerHTML = `<div>NO RESULTS</div>`
     
 
-        container.appendChild(exchangeColumns);
+    noResultCardContent.appendChild(noResultContent);
+    noResultCard.appendChild(noResultCardContent)
+    noResultColumn.appendChild(noResultCard);
+    // noResultText.style.position = "absolute", textAlign = "center", marginTop = "50%", width = "100vw", height = "100vh";
 
-    })
+    if(searchCoins.length == 0 && searchExchanges.length == 0){
+    container.appendChild(noResultColumn)
+    } else {
+        searchExchanges.forEach(exchange => {
+            let exchangeColumns = document.createElement('div');
+            exchangeColumns.classList.add('columns');
 
+            let exchangeCard = document.createElement('div');
+            exchangeCard.classList.add('card');
+            exchangeCard.style.width = "100%";
 
-    searchCoins.forEach((coin, currentIteration, array) => {
-        let columns = document.createElement('div');
-        columns.classList.add('columns');
+            let exchangeCardContent = document.createElement('div');
+            exchangeCardContent.classList.add('card-content');
+            exchangeCardContent.style.textAlign = "center";
+
+            let exchangeContent = document.createElement('div');
+            exchangeContent.classList.add('content');
+
+            exchangeContent.innerHTML = `
+            <span style="color: black; font-family: Courier New; font-weight: bold">${exchange.id}</span>
+            <div>Name: <span style="color: purple;">${exchange.name}</span></div>
+            <div>Market Type: <span style="color: purple;">${exchange.market_type}</span></div>
+            <div><img src="${exchange.large}" style="padding-top: 10px;"></div>
+            `
+
+            exchangeCardContent.appendChild(exchangeContent);
+            exchangeCard.appendChild(exchangeCardContent);
+
+            exchangeColumns.appendChild(exchangeCard);
         
-       
-        let card = document.createElement('div');
-        card.classList.add('card');
-        card.style.width = "100%";
-       
-        let cardContent = document.createElement('div');
-        cardContent.classList.add('card-content');
-        cardContent.style.textAlign = "center";
-       
-        let content = document.createElement('div');
-        content.classList.add('content');
 
-        content.innerHTML = `
-        <span style="color: black; font-family: Courier New; font-weight: bold">${coin.id}</span>
-        <div>Name: <span style="color: purple;">${coin.name}</span></div>
-        <div>Symbol: <span style="color: purple;">${coin.symbol}</span></div>
-        <div>Market Cap Rank: <span style="color: purple;">${coin.market_cap_rank}</span></div>
-        <div><img src="${coin.large}" style="padding-top: 10px;"></div>
-        `;
+            container.appendChild(exchangeColumns);
 
-        cardContent.appendChild(content);
-        card.appendChild(cardContent);
+        })
 
-        columns.appendChild(card);
-    
 
-        container.appendChild(columns);
-     
+        searchCoins.forEach((coin, currentIteration, array) => {
+            let columns = document.createElement('div');
+            columns.classList.add('columns');
+            
+        
+            let card = document.createElement('div');
+            card.classList.add('card');
+            card.style.width = "100%";
+        
+            let cardContent = document.createElement('div');
+            cardContent.classList.add('card-content');
+            cardContent.style.textAlign = "center";
+        
+            let content = document.createElement('div');
+            content.classList.add('content');
 
-        if (currentIteration === array.length - 1){
-            scrollToTop();
-        }
+            content.innerHTML = `
+            <span style="color: black; font-family: Courier New; font-weight: bold">${coin.id}</span>
+            <div>Name: <span style="color: purple;">${coin.name}</span></div>
+            <div>Symbol: <span style="color: purple;">${coin.symbol}</span></div>
+            <div>Market Cap Rank: <span style="color: purple;">${coin.market_cap_rank}</span></div>
+            <div><img src="${coin.large}" style="padding-top: 10px;"></div>
+            `;
 
-    })
+            cardContent.appendChild(content);
+            card.appendChild(cardContent);
+            columns.appendChild(card);
+            container.appendChild(columns);
+        
+            if (currentIteration === array.length - 1){
+                scrollToTop();
+            }
 
-    
+        })
+
+        
+    }
 }
 
 
 
-// const audio = new Audio("/audio/chalo.mp3");
-// document.addEventListener('click', () => {
-//     audio.play();
-// });
+const audio = new Audio("/audio/chalo.mp3");
+document.addEventListener('click', () => {
+    audio.play();
+});
 
 
 
@@ -181,7 +185,6 @@ const currency = new Intl.NumberFormat('en-US', {
 //////
 
 let jsonTrends;
-// let firstText;
 const getTrends = async () => {
 
  container.innerHTML = '';
@@ -229,20 +232,6 @@ const getTrends = async () => {
 
 const getCoins = async () => {
  container.innerHTML = '';
-
- // if(document.readyState !== 'complete'){
- // let loadDiv = document.createElement('div');
- // loadDiv.classList.add('load');
- // container.append(loadDiv);
- // }
- // console.log(container);
-
- // do {
- // container.innerHTML = '';
- // let loadDiv = document.createElement('div');
- // loadDiv.classList.add('load');
- // container.append(loadDiv);
- // } while (document.readyState !== "complete");
 
  const responseCoins = await fetch(coinsAPI);
  const jsonCoins = await responseCoins.json();
@@ -306,11 +295,6 @@ const getCoins = async () => {
 
 
 
-
-
-
-
-
 const getCategoriesInfo = async () => {
  container.innerHTML = '';
 
@@ -365,8 +349,6 @@ const getDerivatives = async () => {
  const derivativesResponse = await fetch(derivativesAPI);
  const derivativesJSON = await derivativesResponse.json();
 
-//  console.log(derivativesJSON);
-
  derivativesJSON.forEach((e, currentIteration, array) => {
 
 let columns = document.createElement('div');
@@ -415,23 +397,13 @@ let derivativeEstablished = e.year_established === null || e.year_established ==
 };
 
 
-
-
-
-
-
-
 const getGlobalInfo = async () => {
  container.innerHTML = '';
 
  const globalResponse = await fetch(globalAPI);
  const globalJSON = await globalResponse.json();
  console.log(globalJSON);
- // console.log(globalJSON.data.market_cap_percentage);
 
- 
- // capPercents.push(globalJSON.data.market_cap_percentage);
- // console.log(capPercents);
  console.log(globalJSON.data.market_cap_percentage);
 
  let capPercents = [];
@@ -656,18 +628,6 @@ const getGlobalInfo = async () => {
  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
  trendingButton && trendingButton.addEventListener('click', getTrends);
  popularButton && popularButton.addEventListener('click', getCoins);
@@ -677,20 +637,6 @@ document.addEventListener("DOMContentLoaded", () => {
  globalButton && globalButton.addEventListener('click', getGlobalInfo);
  searchButton && searchButton.addEventListener('click', getSearchResults);
 });
-
-// searchButton.addEventListener('click', (e) => {
-   
-//     getSearchResults();
-// })
-
-
-
-
-
-
-
-
-
 
 //greensock:
 const t1 = new TimelineMax();
