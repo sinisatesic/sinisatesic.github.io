@@ -95,15 +95,18 @@ const getSearchResults = async () => {
 
     let noResultColumn = document.createElement('div');
     noResultColumn.classList.add('columns');
+    noResultColumn.style.paddingTop = "20%"
+
     let noResultCard = document.createElement('div');
     noResultCard.classList.add('card');
     noResultCard.style.width = "100%"
+
     let noResultCardContent = document.createElement('div');
     noResultCardContent.classList.add('card-content');
     noResultCardContent.style.textAlign = "center"
+
     let noResultContent = document.createElement('div');
     noResultContent.classList.add('content');
-
     noResultContent.innerHTML = `<div>NO RESULTS</div>`
     
 
