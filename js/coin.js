@@ -1,6 +1,5 @@
 // vanilla (es6):
 
-
 const derivativesAPI = `https://api.coingecko.com/api/v3/derivatives/exchanges`;
 const coinsAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
 const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
@@ -59,15 +58,6 @@ window.addEventListener('scroll', () => {
     this.play();
   }, false);
 
-
- 
-// const toggleMusic = () => {
-//     return audio.paused ? audio.play() : audio.pause();
-// }
-
-// audioButton.addEventListener('click', () => {
-//     toggleMusic();
-// });
 
 let searchValue;
 let modifiedSearch;
