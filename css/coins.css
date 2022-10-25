@@ -226,7 +226,7 @@
     inset -5px -5px 10px blue;
     animation: backgroundChange 2s infinite;
     cursor: pointer;
-    padding: 10px;
+    padding: 6px;
   }
   #searchButton:hover {
     animation: bouncey .5s 1;
