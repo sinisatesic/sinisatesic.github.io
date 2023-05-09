@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
   });
 
 // for song
-  const audio = new Audio("/audio/chalo.mp3");
+  const audio = new Audio("audio/chalo.mp3");
 
   audioButton.addEventListener('click', () => {
     //   toggleMusic();
