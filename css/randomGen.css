@@ -1,3 +1,7 @@
+* {
+	font-family: andale mono, monospace;
+}
+
 h2 {
 	margin: 0 auto;
 	text-align: center;
@@ -13,7 +17,7 @@ h2 {
 #generateButton {
 	text-align: center;
 	height: 20px;
-	width: 80px;
+	width: 100px;
 	border: 2px solid #12375c;
 	background-color: #fff;
 	color: #12375c;
@@ -33,7 +37,7 @@ h2 {
 #clearButton {
 	text-align: center;
 	height: 20px;
-	width: 80px;
+	width: 100px;
 	border: 2px solid #12375c;
 	background-color: #fff;
 	color: #12375c;
@@ -53,7 +57,7 @@ h2 {
 #copyButton {
 	text-align: center;
 	height: 20px;
-	width: 80px;
+	width: 100px;
 	border: 2px solid #12375c;
 	background-color: #fff;
 	color: #12375c;
@@ -81,9 +85,8 @@ h2 {
 }
 
 #inputDiv {
-	margin-left: 39%;
+	margin-left: 41%;
 	padding-bottom: 20px;
-	
 }
 
 
