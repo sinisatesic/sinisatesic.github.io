@@ -1,4 +1,4 @@
-Bonjour!
+Hello!
 
 Herein this file is a brief description regarding this repo and the content within it. 
 This repo hosts the files attributed to my live personal website, contents to
