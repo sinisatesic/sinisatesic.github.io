@@ -392,8 +392,7 @@ let derivativeEstablished = e.year_established === null || e.year_established ==
  <div>Open Interest - BTC: <span style="color: purple;">${e.open_interest_btc}</span></div>
  <div>Number of Perpentual Pairs: <span style="color: purple;">${e.number_of_perpetual_pairs}</span></div>
  <div>Number of Future Pairs: <span style="color: purple;">${e.number_of_futures_pairs}</span></div>
- <div><img src="${e.image}" style="padding-top: 10px;"></div>
- `;
+ <div><img src="${e.image}" style="padding-top: 10px;"></div>`;
 
 
  cardContent.appendChild(content);

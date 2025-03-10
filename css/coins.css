@@ -12,10 +12,10 @@
   }
 
   #containerYes {
-    background-image:url("img/bitcoin.gif"); 
     background-repeat:no-repeat; 
     background-attachment: fixed;
     background-size: cover;
+    /* background-image: url(/img/theGif.gif); */
     min-height: 100vh;
     overflow-y: scroll;
     padding: 0;
