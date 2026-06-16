@@ -1,9 +1,9 @@
-const generateButton = document.getElementById("generateButton");
-const clearButton = document.getElementById("clearButton");
-const copyButton = document.getElementById("copyButton");
-const initial = document.getElementById("initialText");
-const content = document.getElementById("content");
-const input = document.getElementById("input");
+const generateButton = document.getElementById('generateButton');
+const clearButton = document.getElementById('clearButton');
+const copyButton = document.getElementById('copyButton');
+const initial = document.getElementById('initialText');
+const content = document.getElementById('content');
+const input = document.getElementById('input');
 let createdText;
 
 const generateIDs = () => {
@@ -40,7 +40,7 @@ let arr = [];
     }
 
     // console.log(arr.join(','));
-    // content.innerHTML = ``;
+    // content.innerHTML = '';
     createdText = document.createElement('text');
     createdText.innerHTML = `${arr.join('')}<br>`;
     createdText.classList.add('opacityFont');
@@ -55,16 +55,16 @@ let arr = [];
 document.addEventListener("DOMContentLoaded", () => {
     generateButton.addEventListener('click', generateIDs);
     generateButton.addEventListener('click', () => {
-    initialText.innerHTML = ``;
+    initialText.innerHTML = '';
     content.classList.add('postClickBorder');
     content.classList.add('vertExpand');
     createdText.classList.add('opacityFont');
-    copyButton.innerHTML = `Copy All`
+    copyButton.innerHTML = 'Copy All';
 })
 
 clearButton.addEventListener('click', () => {
     location.reload();
-    copyButton.innerHTML = `Copy All`;
+    copyButton.innerHTML = 'Copy All';
 })
 
 copyButton.addEventListener('click', copyToClipboard);
@@ -82,9 +82,9 @@ document.addEventListener('keypress', (e) => {
 
 const copyToClipboard = () => {
   var range = document.createRange();
-  range.selectNode(document.getElementById("content"));
+  range.selectNode(document.getElementById('content'));
   window.getSelection().removeAllRanges(); // clear current selection
   window.getSelection().addRange(range); // to select text
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges()
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
 }
