@@ -156,7 +156,7 @@ h2 {
 	}
 	75% {
 		color: #FF6000;
-		opacity: 0.01
+		opacity: 0.5
 	}
 	100% {
 		color: rgba(0, 0, 0, 0.01);
