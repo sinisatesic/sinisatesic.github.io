@@ -28,7 +28,7 @@ let arr = [], specialChars = '!$#&@';
 
 
 // arr.push(Array(4).fill(Math.floor(Math.random() * 9) + 1));
-arr.push(Array(3).fill(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase().join(',')));
+arr.push(Array(3).fill(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase().join('')));
 
 
 console.log(arr.join(''));
