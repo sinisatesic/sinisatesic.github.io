@@ -149,7 +149,7 @@ h2 {
 
 .opacityFont {
 	color: #000;
-	animation: opacityChange 3.5s 1;
+	animation: opacityChange 0.5s 1;
 }
 @keyframes opacityChange {
 	0% {
