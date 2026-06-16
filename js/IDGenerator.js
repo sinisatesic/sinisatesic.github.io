@@ -28,10 +28,10 @@ let arr = [], specialChars = '!$#&@';
 
 
 // arr.push(Array(4).fill(Math.floor(Math.random() * 9) + 1));
-arr.push(Array(3).fill(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase().join('')));
+arr.push(Array(3).fill(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase()));
 
 
-console.log(arr.join(''));
+console.log(arr.join(','));
 // content.innerHTML = ``;
 createdText = document.createElement('text');
 createdText.innerHTML = `${arr.join('')}<br>`;
