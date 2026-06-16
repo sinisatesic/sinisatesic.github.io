@@ -8,31 +8,73 @@ let createdText;
 
 const generateIDs = () => {
 
-    console.log(input.value)
+    // console.log(input.value)
 
-    const randomizer = () => {
+    // const randomizer = () => {
 
+    // let arr = [];
+
+    //     for(let i = 0; i < 3; i++){
+    //         arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+    //     }
+
+    //     for(let i = 0; i < 4; i++){
+    //         arr.push(Math.floor((Math.random() * 9) + 1));
+    //     }
+
+    //     createdText = document.createElement('text');
+    //     createdText.innerHTML = `${arr.join('')}<br>`;
+    //     createdText.classList.add('opacityFont');
+
+
+    //     content.appendChild(createdText);
+    //     }
+
+    //     for(let i = 0; i < input.value; i++){
+    //         randomizer();
+    //     }
+
+
+    console.log(input.value);
+
+  const randomizer = () => {
     let arr = [];
+    
+    // Generate 3 random letters
+    for (let i = 0; i < 3; i++) {
+      arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+    }
+    // Generate 4 random numbers
+    for (let i = 0; i < 4; i++) {
+      arr.push(Math.floor((Math.random() * 9) + 1));
+    }
 
-        for(let i = 0; i < 3; i++){
-            arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
-        }
+    // 1. Create the final ID string first
+    let finalID = arr.join('');
 
-        for(let i = 0; i < 4; i++){
-            arr.push(Math.floor((Math.random() * 9) + 1));
-        }
+    // 2. THE CHECK: If the ID already exists in the content div, 
+    // keep rebuilding a new array until you get a unique one.
+    while (content.textContent.includes(finalID)) {
+      arr = []; // clear the old duplicate array
+      for (let i = 0; i < 3; i++) {
+        arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+      }
+      for (let i = 0; i < 4; i++) {
+        arr.push(Math.floor((Math.random() * 9) + 1));
+      }
+      finalID = arr.join(''); // Update finalID to test again
+    }
 
-        createdText = document.createElement('text');
-        createdText.innerHTML = `${arr.join('')}<br>`;
-        createdText.classList.add('opacityFont');
+    // 3. Only run DOM injection once uniqueness is guaranteed
+    const createdText = document.createElement('span'); // Changed from 'text' to 'span' for valid HTML
+    createdText.innerHTML = `${finalID}<br>`;
+    createdText.classList.add('opacityFont');
+    content.appendChild(createdText);
+  }
 
-
-        content.appendChild(createdText);
-        }
-
-        for(let i = 0; i < input.value; i++){
-            randomizer();
-        }
+  for (let i = 0; i < input.value; i++) {
+    randomizer();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
