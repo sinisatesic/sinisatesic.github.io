@@ -77,6 +77,37 @@ const generateIDs = () => {
   }
 }
 
+
+// // A reusable utility function just for generating the random string
+// const generateRandomID = () => {
+//   const letters = Array.from({ length: 3 }, () => String.fromCharCode(Math.floor(Math.random() * 26) + 65)); // 65 is uppercase A
+//   const numbers = Array.from({ length: 4 }, () => Math.floor(Math.random() * 9) + 1);
+//   return [...letters, ...numbers].join('');
+// };
+
+// const generateIDs = () => {
+//   const count = parseInt(input.value, 10) || 0;
+//   const existingIDs = new Set(); // Using a Set prevents duplicates instantly
+
+//   for (let i = 0; i < count; i++) {
+//     let newID = generateRandomID();
+    
+//     // Ensure uniqueness
+//     while (existingIDs.has(newID)) {
+//       newID = generateRandomID();
+//     }
+//     existingIDs.add(newID);
+
+//     // Modern DOM insertion
+//     const idSpan = document.createElement('span');
+//     idSpan.className = 'opacityFont';
+//     idSpan.innerHTML = `${newID}<br>`;
+//     content.appendChild(idSpan);
+//   }
+// };
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     generateButton.addEventListener('click', generateIDs);
     generateButton.addEventListener('click', () => {
