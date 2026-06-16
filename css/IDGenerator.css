@@ -28,9 +28,9 @@ h2 {
 	/*margin: 0 auto;*/
 	text-align: center;
 	padding-top: 5px;
-	/* animation: textScale 2s infinite; */
+	animation: textScale 2s infinite;
 }
-/* @keyframes textScale {
+@keyframes textScale {
 	0% {
 		transform: scale(0.9);
 	}
@@ -40,7 +40,7 @@ h2 {
 	100% {
 		transform: scale(0.9);
 	}
-} */
+}
 
 #logo {
 	background-image: url("gps.jpg");
