@@ -4,18 +4,18 @@
 }
 
 @media (max-width: 680px) {
-	#input {
-		max-width: 150px;
-		animation: smoothy 0.25s;
+		#input {
+			max-width: 150px;
+			animation: smoothy 0.25s;
+		}
+		@keyframes smoothy {
+		0% {
+			max-width: 325px;
+		}
+		100%{
+			max-width: 150px;
+		}
 	}
-	@keyframes smoothy {
-    0% {
-    	max-width: 325px;
-    }
-    100%{
-        max-width: 150px;
-    }
-}
 }
 
 h2 {

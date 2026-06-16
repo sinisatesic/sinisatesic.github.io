@@ -134,6 +134,8 @@ document.addEventListener('keypress', (e) => {
     }
 })
 
+
+//Stack of:
 const copyToClipboard = () => {
   var range = document.createRange();
   range.selectNode(document.getElementById('content'));
