@@ -1,13 +1,14 @@
-@media (max-width: 680px) {
+
+* {
+	font-family: andale mono, monospace;
+}
+
+@media (width: 680px) {
 	#input {
 		width: 175px;
 		display: grid;
 		place-content: center;
 	}
-}
-
-* {
-	font-family: andale mono, monospace;
 }
 
 h2 {
