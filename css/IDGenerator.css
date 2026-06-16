@@ -107,13 +107,17 @@ h2 {
 
 #input {
 	width: 160px;
-	display: flex;
+	/* display: flex;
   	justify-content: center;
+	display: grid;
+  place-content: center; */
 }
 
 #inputDiv {
 	margin-left: 41%;
 	padding-bottom: 20px;
+	display: flex;
+  	justify-content: center;
 }
 
 
