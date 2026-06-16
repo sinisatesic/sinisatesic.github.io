@@ -6,7 +6,7 @@
 @media (max-width: 680px) {
 	#input {
 		max-width: 150px;
-		animation: smoothy 0.025s;
+		animation: smoothy 0.085s;
 	}
 	@keyframes smoothy {
     0% {
