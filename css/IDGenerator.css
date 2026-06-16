@@ -147,11 +147,11 @@ h2 {
 }
 
 .opacityFont {
-	animation: opacityChange 1.5s 1;
+	animation: opacityChange 3.5s 1;
 }
 @keyframes opacityChange {
 	0% {
-		color: rgba(0, 0, 0, 0.01);
+		color: #FF6000;
 		opacity: 0;
 	}
 	75% {
@@ -159,7 +159,7 @@ h2 {
 		opacity: 0.01
 	}
 	100% {
-		color: #FF6000;
+		color: rgba(0, 0, 0, 0.01);
 		opacity: 1;
 	}
 }
