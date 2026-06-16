@@ -72,9 +72,6 @@ const generateIDs = () => {
   }
 
   for (let i = 0; i < input.value; i++) {
-    if (input.value > 10000){
-        input.value = 0;
-    }
     randomizer();
   }
 }
