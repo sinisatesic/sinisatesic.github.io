@@ -23,7 +23,7 @@ const generateIDs = () => {
 
     //     createdText = document.createElement('text');
     //     createdText.innerHTML = `${arr.join('')}<br>`;
-    //     createdText.classList.add('opacityFont');
+    //     createdText.classList.add('colorChangeFont');
 
 
     //     content.appendChild(createdText);
@@ -67,7 +67,7 @@ const generateIDs = () => {
     // 3. Only run DOM injection once uniqueness is guaranteed
     const createdText = document.createElement('span'); // Changed from 'text' to 'span' for valid HTML
     createdText.innerHTML = `${finalID}<br>`;
-    createdText.classList.add('opacityFont');
+    createdText.classList.add('colorChangeFont');
     content.appendChild(createdText);
   }
 
@@ -99,7 +99,7 @@ const generateIDs = () => {
 
 //     // Modern DOM insertion
 //     const idSpan = document.createElement('span');
-//     idSpan.className = 'opacityFont';
+//     idSpan.className = 'colorChangeFont';
 //     idSpan.innerHTML = `${newID}<br>`;
 //     content.appendChild(idSpan);
 //   }
