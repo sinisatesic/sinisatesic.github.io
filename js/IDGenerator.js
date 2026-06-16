@@ -4,7 +4,6 @@ const copyButton = document.getElementById('copyButton');
 const initial = document.getElementById('initialText');
 const content = document.getElementById('content');
 const input = document.getElementById('input');
-let createdText;
 
 const generateIDs = () => {
 
@@ -114,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initialText.innerHTML = '';
     content.classList.add('postClickBorder');
     content.classList.add('vertExpand');
-    createdText.classList.add('opacityFont');
     copyButton.innerHTML = 'Copy All';
 })
 
