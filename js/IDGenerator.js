@@ -23,8 +23,13 @@ let arr = [], specialChars = '!$#&@';
 // arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
 // arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
 
-arr.push(Math.floor((Math.random() * 9) + 1));
-arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+// arr.push(Math.floor((Math.random() * 9) + 1));
+// arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+
+
+arr.push(Array(4).fill(Math.floor(Math.random() * 9) + 1));
+arr.push(Array(3).fill(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase()));
+
 
 console.log(arr.join(''));
 // content.innerHTML = ``;
