@@ -6,7 +6,22 @@
 @media (max-width: 680px) {
 	#input {
 		max-width: 150px;
+		animation: smoothy 3s;
 	}
+	@keyframes smoothy {
+    0% {
+    	max-width: 325px;
+    }
+    10% {
+      	max-width: 255px;
+    }
+    90%{
+        max-width: 190px;
+    }
+    100%{
+        max-width: 150px;
+    }
+}
 }
 
 h2 {
