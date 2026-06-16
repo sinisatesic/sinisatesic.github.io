@@ -124,7 +124,7 @@ clearButton.addEventListener('click', () => {
 copyButton.addEventListener('click', copyToClipboard);
 
 copyButton.addEventListener('click', () => {
-    copyButton.innerHTML = `Copied`;
+    copyButton.innerHTML = `Copied!`;
     })
 })
 

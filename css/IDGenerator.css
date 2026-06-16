@@ -53,9 +53,9 @@ h2 {
 	text-align: center;
 	height: 20px;
 	width: 100px;
-	border: 2px solid #12375c;
+	border: 2px solid #FF6000;
 	background-color: #fff;
-	color: #12375c;
+	color: #FF6000;
 	cursor: pointer;
 	border-radius: 50vmax;
 	margin: 0 auto;
@@ -63,7 +63,7 @@ h2 {
 }
 #generateButton:hover {
     transition: ease-out 295ms;
-    background-color: #12375c;
+    background-color: #FF6000;
     color: #fff;
     cursor: pointer;
 }
@@ -73,9 +73,9 @@ h2 {
 	text-align: center;
 	height: 20px;
 	width: 100px;
-	border: 2px solid #12375c;
+	border: 2px solid #FF6000;
 	background-color: #fff;
-	color: #12375c;
+	color: #FF6000;
 	cursor: pointer;
 	border-radius: 50vmax;
 	margin: 0 auto;
@@ -83,7 +83,7 @@ h2 {
 }
 #clearButton:hover {
     transition: ease-out 295ms;
-    background-color: #12375c;
+    background-color: #FF6000;
     color: #fff;
     cursor: pointer;
 }
@@ -93,9 +93,9 @@ h2 {
 	text-align: center;
 	height: 20px;
 	width: 100px;
-	border: 2px solid #12375c;
+	border: 2px solid #FF6000;
 	background-color: #fff;
-	color: #12375c;
+	color: #FF6000;
 	cursor: pointer;
 	border-radius: 50vmax;
 	margin: 0 auto;
@@ -103,7 +103,7 @@ h2 {
 }
 #copyButton:hover {
     transition: ease-out 295ms;
-    background-color: #12375c;
+    background-color: #FF6000;
     color: #fff;
     cursor: pointer;
 }
@@ -159,13 +159,13 @@ h2 {
 		opacity: 0.01
 	}
 	100% {
-		color: #12375c;
+		color: #FF6000;
 		opacity: 1;
 	}
 }
 
 .postClickBorder {
-	border: 2.2px solid #12375c;
+	border: 2.2px solid #FF6000;
 
 }
 
