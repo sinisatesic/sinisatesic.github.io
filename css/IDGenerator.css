@@ -1,0 +1,156 @@
+* {
+	font-family: andale mono, monospace;
+}
+
+h2 {
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#initialText {
+	/*margin: 0 auto;*/
+	text-align: center;
+	padding-top: 5px;
+	animation: textScale 2s infinite;
+}
+@keyframes textScale {
+	0% {
+		transform: scale(0.9);
+	}
+	60%{
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0.9);
+	}
+}
+
+#logo {
+	background-image: url("gps.jpg");
+	background-size: contain;
+	height: 100px;
+	width: 100px;
+}
+
+#generateButton {
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	border: 2px solid #12375c;
+	background-color: #fff;
+	color: #12375c;
+	cursor: pointer;
+	border-radius: 50vmax;
+	margin: 0 auto;
+	box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+}
+#generateButton:hover {
+    transition: ease-out 295ms;
+    background-color: #12375c;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#clearButton {
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	border: 2px solid #12375c;
+	background-color: #fff;
+	color: #12375c;
+	cursor: pointer;
+	border-radius: 50vmax;
+	margin: 0 auto;
+	box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+}
+#clearButton:hover {
+    transition: ease-out 295ms;
+    background-color: #12375c;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#copyButton {
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	border: 2px solid #12375c;
+	background-color: #fff;
+	color: #12375c;
+	cursor: pointer;
+	border-radius: 50vmax;
+	margin: 0 auto;
+	box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+}
+#copyButton:hover {
+    transition: ease-out 295ms;
+    background-color: #12375c;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#content {
+	margin: 0 auto;
+	/*margin-top: 20px;*/
+	text-align: center;
+	padding: 25px 0px;
+	/*background-image: url("geo.gif");*/
+	/*background-size: contain;*/
+	/*height: 100px;
+	width: 100px;*/
+	/*background-repeat: no-repeat;*/
+}
+
+#input {
+	width: 160px;
+}
+
+#inputDiv {
+	margin-left: 41%;
+	padding-bottom: 20px;
+}
+
+
+.vertExpand {
+	animation: expansion 1s 1 ease-out; 
+}
+@keyframes expansion {
+	0% {
+		transform: scaleY(0);
+	}
+	100% {
+		transform: scaleY(1);
+		transform: scaleX(3);
+	}
+}
+
+.opacityFont {
+	animation: opacityChange 1.5s 1;
+}
+@keyframes opacityChange {
+	0% {
+		color: rgba(0, 0, 0, 0.01);
+		opacity: 0;
+	}
+	75% {
+		color: rgba(0, 0, 0, 0.01);
+		opacity: 0.01
+	}
+	100% {
+		color: #12375c;
+		opacity: 1;
+	}
+}
+
+.postClickBorder {
+	border: 2.2px solid #12375c;
+
+}
+
+.transparentBorder {
+	border: transparent;
+}

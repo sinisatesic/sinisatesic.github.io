@@ -399,6 +399,7 @@ button:hover {
     color: #fff;
     background-color: #1a2f5e;
     height: 55%;
+    min-width: 100%;
 }
 .footer-subtext {
     color: #e5c84f;
