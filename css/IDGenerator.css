@@ -106,7 +106,7 @@ h2 {
 }
 
 #input {
-	width: 300px;
+	width: 350px;
 	display: grid;
   	place-content: center;
 }
