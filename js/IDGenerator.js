@@ -14,11 +14,6 @@ const generateIDs = () => {
 
     let arr = [];
 
-    while (content.includes(createdText)){
-        arr = [];
-        
-    }
-
         for(let i = 0; i < 3; i++){
             arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
         }
