@@ -12,16 +12,19 @@ const randomizer = () => {
 
 let arr = [], specialChars = '!$#&@';
 
+// arr.push(Math.floor((Math.random() * 9) + 1));
+// arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+// arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
+// arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+// arr.push(Math.floor((Math.random() * 9) + 1));
+// arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+// arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
+// arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+// arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
+// arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
+
 arr.push(Math.floor((Math.random() * 9) + 1));
 arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
-arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
-arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
-arr.push(Math.floor((Math.random() * 9) + 1));
-arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
-arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toLowerCase());
-arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
-arr.push(String.fromCharCode(Math.floor(Math.random() * 26) + 97).toUpperCase());
-arr.push(specialChars.charAt(Math.floor(Math.random() * 5)))
 
 console.log(arr.join(''));
 // content.innerHTML = ``;
