@@ -151,12 +151,12 @@ h2 {
 }
 @keyframes opacityChange {
 	0% {
-		color: #FFF;
+		color: #FF6000;
 		opacity: 0;
 	}
 	75% {
 		color: #FF6000;
-		opacity: 0.5
+		opacity: 0.01
 	}
 	100% {
 		color: rgba(0, 0, 0, 0.01);
