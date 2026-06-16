@@ -146,23 +146,23 @@ h2 {
 	}
 }
 
-/* .colorChangeFont {
-	animation: colorChange 1.5s 1;
+.opacityFont {
+	animation: opacityChange 1.5s 1;
 }
-@keyframes colorChange {
+@keyframes opacityChange {
 	0% {
-		color: #FF6000;
+		color: rgba(0, 0, 0, 0.01);
 		opacity: 0;
 	}
 	75% {
-		color: #FF6000;
-		opacity: 0.75;
+		color: rgba(0, 0, 0, 0.01);
+		opacity: 0.01
 	}
 	100% {
-		color: rgba(0, 0, 0, 0.01);
+		color: #FF6000;
 		opacity: 1;
 	}
-} */
+}
 
 .postClickBorder {
 	border: 2.2px solid #FF6000;
