@@ -1,5 +1,5 @@
 
-* {
+h2, #generateButton, #copyButton, #clearButton {
 	font-family: andale mono, monospace;
 }
 
@@ -149,6 +149,8 @@ h2 {
 
 .opacityFont {
 	animation: opacityChange 2.25s 1;
+	font-family: "Calibri", sans-serif;
+  	font-size: 11pt;
 }
 @keyframes opacityChange {
 	0% {
