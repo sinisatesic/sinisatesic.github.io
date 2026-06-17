@@ -42,12 +42,12 @@ h2 {
 	}
 }
 
-#logo {
+/* #logo {
 	background-image: url("gps.jpg");
 	background-size: contain;
 	height: 100px;
 	width: 100px;
-}
+} */
 
 #generateButton {
 	text-align: center;
