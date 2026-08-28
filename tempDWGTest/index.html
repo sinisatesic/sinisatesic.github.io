@@ -7,5 +7,46 @@
 </head>
 <body>
     <h1>TEST</h1>
+<div id="inputContainer" style="border: 5px solid red;">
+    <input type="file" id="inputBox" accept=".dwg">
+</div>
+
+<div id="messageContainer"></div>
+
+</div>
+
+<script>
+    const inputBox = document.getElementById("inputBox");
+    const messageContainer = document.getElementById("messageContainer");
+    const fileTypeMessage = document.createElement("span");
+    const messageContent = document.createTextNode("");
+
+    inputBox.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const fileExtension = file.name.split('.').pop().toLowerCase();
+        // console.log(fileExtension);
+        
+        
+        if (!file) return
+        if (fileExtension !== "dwg"){
+            inputBox.value = '';
+            messageContent.textContent = 'Only DWG file type is permitted';
+            // fileTypeMessage = document.createElement("span");
+            // messageContent = document.createTextNode("Only DWG file types can be attached");
+            // fileTypeMessage.appendChild(messageContent);
+            // messageContainer.appendChild(fileTypeMessage); 
+        } else {
+            messageContent.textContent = 'Your DWG file is attached';
+        }
+
+            fileTypeMessage.appendChild(messageContent);
+            console.log(inputBox);
+            console.log(fileExtension);
+    })
+
+    messageContainer.appendChild(fileTypeMessage); 
+    // console.log(inputBox);
+    
+</script>
 </body>
 </html>
