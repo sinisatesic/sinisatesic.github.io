@@ -1,0 +1,33 @@
+
+
+#container {
+    display: grid;
+  	place-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h1, #imgTitle {
+    display: flex;
+    justify-content: center;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+}
+
+#zipFile {
+    cursor: pointer;
+}
+#inputBox {
+    cursor: pointer;
+}
+#inputContainer {
+    cursor: pointer;
+}
+#inputBox::-webkit-file-upload-button {
+    cursor: pointer;
+}
+#inputBox::file-selector-button {
+    cursor: pointer;
+}
