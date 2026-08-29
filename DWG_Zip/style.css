@@ -1,5 +1,8 @@
 
 
+html {
+    background-color: #EE6327;
+}
 #container {
     display: grid;
   	place-content: center;
@@ -14,10 +17,13 @@ h1, #imgTitle {
     font-style: normal;
     font-size: 3rem;
     letter-spacing: 2.5px;
+    color: #fff;
 }
 
 #zipFile {
     cursor: pointer;
+    padding: 15px;
+    margin-top: 15px;
 }
 #inputBox {
     cursor: pointer;
