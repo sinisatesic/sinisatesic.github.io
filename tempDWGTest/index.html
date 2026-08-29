@@ -47,6 +47,18 @@
 
     messageContainer.appendChild(fileTypeMessage); 
     // console.log(inputBox);
+    const zipBuilder = async () => {
+        const zip = new JSZip();
+        zip.file(inputBox, data, { binary: true });
+        const content = await zip.generateAsync({ type: "blob" });
+        console.log(content)
+        saveAs(content, "dwgFile(s).zip");
+        console.log(content)
+    }
+    
+
+    // const dwgFolder = zip.folder("dwgFolder");
+
     
 </script>
 </body>
