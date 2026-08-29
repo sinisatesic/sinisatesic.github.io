@@ -14,6 +14,10 @@
 
 <div id="messageContainer"></div>
 
+<button id="zipFile">Zip DWG File</button>
+
+<div id="output">Output: </div>
+
 </div>
 
 <script>
@@ -22,44 +26,47 @@
     const fileTypeMessage = document.createElement("span");
     const messageContent = document.createTextNode("");
 
-    inputBox.addEventListener('change', (e) => {
+    inputBox.addEventListener('change', async (e) => {
         const file = e.target.files[0];
         const fileExtension = file.name.split('.').pop().toLowerCase();
-        // console.log(fileExtension);
-        
-        
+
+
         if (!file) return
         if (fileExtension !== "dwg"){
             inputBox.value = '';
             messageContent.textContent = 'Only DWG file type is permitted';
-            // fileTypeMessage = document.createElement("span");
-            // messageContent = document.createTextNode("Only DWG file types can be attached");
-            // fileTypeMessage.appendChild(messageContent);
-            // messageContainer.appendChild(fileTypeMessage); 
         } else {
-            messageContent.textContent = 'Your DWG file is attached';
+            messageContent.textContent = 'Compressing';
+            try {
+                const zip = new JSZip();
+                zip.file(file.name, file);
+                const content = await zip.generateAsync({ type: "blob" }); //learn more; jszip stuff
+                console.log(content)
+                // saveAs(URL.createObjectURL, document.createElement('a')); //learn more; jszip stuff
+                const downloadURL = URL.createObjectURL(content);
+                const anchorLink = document.createElement('a');
+                anchorLink.href = downloadURL;
+                anchorLink.download = 'DWG_Zip_Folder.zip';
+                anchorLink.click();
+                URL.revokeObjectURL(downloadURL);
+                messageContent.textContent = 'zip downloaded';
+            } catch (error) {
+                console.error (error);
+            }
+            
         }
 
             fileTypeMessage.appendChild(messageContent);
             console.log(inputBox);
             console.log(fileExtension);
+
     })
 
     messageContainer.appendChild(fileTypeMessage); 
-    // console.log(inputBox);
-    const zipBuilder = async () => {
-        const zip = new JSZip();
-        zip.file(inputBox, data, { binary: true });
-        const content = await zip.generateAsync({ type: "blob" });
-        console.log(content)
-        saveAs(content, "dwgFile(s).zip");
-        console.log(content)
-    }
-    
 
-    // const dwgFolder = zip.folder("dwgFolder");
 
-    
+
+
 </script>
 </body>
 </html>
