@@ -2,6 +2,11 @@ html {
     background-color: #F07C27; 
 }
 
+input[type="file"] {
+    display: block;
+    margin-top: 100px;
+}
+
 
 button, input { 
     all: unset; 
@@ -24,7 +29,7 @@ button, input {
 button:hover, input:hover { 
     transition: ease-out 295ms; 
     background-color: #FF6000; 
-    color: #fff; 
+    color: #fff;
 }
 
 /* Accessibility — keyboard focus */
@@ -99,9 +104,10 @@ h1 {
     font-family: "Archivo Black", sans-serif; 
     font-weight: 400; 
     font-style: normal; 
-    font-size: 3rem; 
+    font-size: 3.3rem; 
     letter-spacing: 2.5px; 
-    color: #fff; 
+    color: #fff;
+    margin-top: 150px;
 }
 
 #imgTitle { 
