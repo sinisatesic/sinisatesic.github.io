@@ -1,39 +1,149 @@
+html { 
+    background-color: #F07C27; 
+}
 
 
-html {
-    background-color: #EE6327;
+button, input { 
+    all: unset; 
+    box-sizing: border-box; 
+    display: block; 
+    width: 100%; 
+    height: 44px;
+    padding: 0.5rem 1rem; 
+    margin: 0 auto; 
+    text-align: center; 
+    color: #FF6000; 
+    background-color: #fff; 
+    border: 2px solid #FF6000; 
+    border-radius: 50vmax; 
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22); 
+    cursor: pointer; 
+    touch-action: manipulation; 
 }
-#container {
-    display: grid;
-  	place-content: center;
-    align-items: center;
-    min-height: 100vh;
+
+button:hover, input:hover { 
+    transition: ease-out 295ms; 
+    background-color: #FF6000; 
+    color: #fff; 
 }
-h1, #imgTitle {
-    display: flex;
-    justify-content: center;
-    font-family: "Archivo Black", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3rem;
-    letter-spacing: 2.5px;
+
+/* Accessibility — keyboard focus */
+button:focus-visible, input:focus-visible { 
+    outline: 2px solid #0070f3; 
+    outline-offset: 3px; 
+}
+
+/* Accessibility — disabled state */
+button:disabled, input:disabled { 
+    cursor: not-allowed; 
+    opacity: 0.5; 
+}
+
+#container { 
+    position: relative;
+    display: grid; 
+    place-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+#messageContainer {
+    padding-top: 50px;
+    display: flex; 
+    justify-content: center; 
+    font-family: "Archivo Black", sans-serif; 
+    font-weight: 400; 
+    font-style: normal; 
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    letter-spacing: 2.5px; 
     color: #fff;
+    animation: test ease-in-out 3s infinite;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff;
+}
+@keyframes test {
+    0% {
+        opacity: 0;
+        color: #fff;
+        text-shadow: 0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff;
+    }
+    50% {
+        opacity: 1;
+        color: #fff;
+        text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff;
+    }
+    100% {
+        opacity: 0;
+        color: #fff;
+        text-shadow: 0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff;
+    }
+
 }
 
-#zipFile {
-    cursor: pointer;
-    padding: 15px;
-    margin-top: 15px;
+h1 { 
+    display: flex; 
+    justify-content: center; 
+    font-family: "Archivo Black", sans-serif; 
+    font-weight: 400; 
+    font-style: normal; 
+    font-size: 3rem; 
+    letter-spacing: 2.5px; 
+    color: #fff; 
 }
-#inputBox {
-    cursor: pointer;
+
+#imgTitle { 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    width: 100%; 
+    height: 150px;
 }
-#inputContainer {
-    cursor: pointer;
+
+video {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
 }
-#inputBox::-webkit-file-upload-button {
-    cursor: pointer;
+
+
+.bg-video {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
-#inputBox::file-selector-button {
-    cursor: pointer;
+
+
+#inputBox { 
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    font-family: "Archivo Black", sans-serif; 
+    font-weight: 400; 
+}
+
+#file-upload-button { 
+    padding: 20px; 
+}
+
+#inputContainer,
+#inputBox::-webkit-file-upload-button,
+#inputBox::file-selector-button { 
+    cursor: pointer; 
 }

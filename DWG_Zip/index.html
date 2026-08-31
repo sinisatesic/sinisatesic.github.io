@@ -13,18 +13,25 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-12 col-md-6">
-            <div id="container">
-                <div id="imgTitle">placeholder</div>
-                <h1>DWG to ZIP</h1>
-                <div id="inputContainer" style="border: 5px solid red;">
-                    <input type="file" id="inputBox" accept=".dwg">
-                </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6" style="min-width: 0;">
+                <div id="container">
+                    <div id="imgTitle"></div>
 
-                <div id="messageContainer"></div>
-                <button id="zipFile">Zip DWG File</button>
+                        <video autoplay muted loop playsinline class="bg-video">
+                            <source src="compression.mp4" type="video/mp4">
+                        </video>
+
+                    <h1>DWG to ZIP</h1>
+                    <div id="inputContainer">
+                        <input type="file" id="inputBox" accept=".dwg">
+                    </div>
+
+                    <div id="messageContainer"></div>
+                    <!-- dynamic span ele will generate -->
+                    </div>
+                    <script src="dwgConversion.js"></script>
                 </div>
-                <script src="dwgConversion.js"></script>
             </div>
         </div>
     </div>
