@@ -41,7 +41,7 @@ inputBox.addEventListener('change', async (e) => {
     }
         fileTypeMessage.appendChild(messageContent);
         console.log(inputBox);
-        console.log(fileExtension);
+        console.log(`File type:${fileExtension}`);
 });
 messageContainer.appendChild(fileTypeMessage);
 
