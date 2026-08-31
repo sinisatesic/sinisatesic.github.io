@@ -14,7 +14,7 @@ button, input {
     text-align: center; 
     color: #FF6000; 
     background-color: #fff; 
-    border: 2px solid #FF6000; 
+    border: 5px solid #FF6000; 
     border-radius: 50vmax; 
     box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22); 
     cursor: pointer; 
@@ -49,8 +49,10 @@ button:disabled, input:disabled {
 
 #messageContainer {
     padding-top: 50px;
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
     font-family: "Archivo Black", sans-serif; 
     font-weight: 400; 
     font-style: normal; 
